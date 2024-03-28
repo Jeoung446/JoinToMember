@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/idTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/idEidtTextView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="아이디를 입력해주세요"
+        android:textSize="20sp"
+        android:maxLength="7"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/idTextView2"
+        app:layout_constraintStart_toStartOf="@id/idTextView2" />
+
+    <TextView
+        android:id="@+id/passwordTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/idEidtTextView2"
+        app:layout_constraintStart_toStartOf="@id/idEidtTextView2"/>
+
+    <EditText
+        android:id="@+id/passwordEidtTextView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호를 입력해주세요"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:maxLength="10"
+        app:layout_constraintTop_toBottomOf="@id/passwordTextView2"
+        app:layout_constraintStart_toStartOf="@id/passwordTextView2"/>
+
+    <TextView
+        android:id="@+id/nameTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/passwordEidtTextView2"
+        app:layout_constraintStart_toStartOf="@id/passwordEidtTextView2"/>
+
+    <EditText
+        android:id="@+id/nameEidtTextView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="이름를 입력해주세요"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:maxLength="4"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView2"
+        app:layout_constraintStart_toStartOf="@id/passwordTextView2"/>
+
+    <Button
+        android:id="@+id/joinButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/nameEidtTextView2" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:src="@drawable/awe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/joinButton2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
