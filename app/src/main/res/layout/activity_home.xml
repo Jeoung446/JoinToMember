@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".HomeActivity">
 
     <ImageView
@@ -12,48 +12,64 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="fitXY"
-        android:src="@drawable/car_ew" />
+        android:src="@drawable/car_ew"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-
-    <TextView
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="이름 : 정준호"
-        android:textSize="30sp"
-        android:textStyle="italic" />
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/imageBtn">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="나이 : 28"
-        android:textSize="30sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="이름 : 정준호"
+            android:textSize="30sp"
+            android:textStyle="italic" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="mbti : infp"
-        android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="나이 : 28"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="mbti : infp"
+            android:textSize="30sp"
+            />
+
+    </LinearLayout>
 
 
     <TextView
         android:id="@+id/txtGetData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="250dp"
         android:gravity="center"
         android:text="Text"
-        android:textSize="30sp" />
-
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
         android:id="@+id/cancelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="돌아가기" />
+        android:text="돌아가기"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
